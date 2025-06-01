@@ -19,7 +19,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <h2 className="logo">✨ My Gallery</h2>
-      <div className="nav-links">
+      <div className="nav-items">
         <Link to="/">Gallery</Link>
         <Link to="/quote">Quotes</Link>
         <label className="switch">

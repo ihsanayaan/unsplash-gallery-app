@@ -1,23 +1,44 @@
-/* Navbar Links */
-.nav-links a {
-  color: #f0f4f8;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: linear-gradient(120deg, #1e3c72, #2a5298);
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.nav-items {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-items a {
+  color: #fff;
   text-decoration: none;
-  margin-left: 1.5rem;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
-  color: #c9c7f9;
+.nav-items a:hover {
+  color: #ffdd57;
 }
 
-/* Switch (Dark Mode Toggle) */
+/* Toggle Button */
 .switch {
   position: relative;
   display: inline-block;
-  width: 50px;
-  height: 24px;
-  margin-left: 1rem;
+  width: 60px;
+  height: 30px;
 }
 
 .switch input {
@@ -32,25 +53,49 @@
   inset: 0;
   background-color: #ccc;
   transition: 0.4s;
-  border-radius: 34px;
+  border-radius: 30px;
 }
 
 .slider:before {
   position: absolute;
   content: "";
-  height: 18px;
-  width: 18px;
+  height: 22px;
+  width: 22px;
   left: 4px;
-  bottom: 3px;
+  bottom: 4px;
   background-color: white;
   transition: 0.4s;
   border-radius: 50%;
 }
 
 input:checked + .slider {
-  background-color: #5e5aa4;
+  background-color: #ffdd57;
 }
 
 input:checked + .slider:before {
-  transform: translateX(26px);
+  transform: translateX(28px);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .nav-items {
+    gap: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .switch {
+    width: 50px;
+    height: 26px;
+  }
+
+  .slider:before {
+    width: 18px;
+    height: 18px;
+    left: 4px;
+    bottom: 4px;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(22px);
+  }
 }
