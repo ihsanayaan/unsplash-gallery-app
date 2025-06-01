@@ -8,18 +8,30 @@
 
 .search-box {
   width: 100%;
-  max-width: 400px; /* limits the width */
-  margin: 0 auto 20px auto; /* centers and gives bottom margin */
-  display: block;
-  padding: 12px 16px;
+  max-width: 500px;
+  margin: 1rem auto 2rem auto;
+  padding: 14px 20px;
   font-size: 1rem;
-  border: 2px solid #999;
-  border-radius: 8px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
   outline: none;
-  background-color: #fff;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+  transition: border 0.3s, box-shadow 0.3s;
+  display: block;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
 }
 
+.search-box:focus {
+  border-color: #0077ff;
+  box-shadow: 0 0 12px rgba(0, 119, 255, 0.2);
+}
+
+@media (max-width: 600px) {
+  .search-box {
+    font-size: 0.95rem;
+    padding: 12px 16px;
+  }
+}
 
 .image-grid {
   display: grid;
